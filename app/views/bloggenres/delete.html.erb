@@ -1,0 +1,17 @@
+<h1>Bloggenre#delete</h1>
+<p>以下を削除してもいいですか？</p>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <td><%= @bloggenre.name %></td>
+  </tr>
+  <tr>
+    <th>Memo</th>
+    <td><%= @bloggenre.memo %></td>
+  </tr>
+
+<%= form_tag controller:'bloggenres', action:'delete' do %>
+  <%= hidden_field_tag "id", {value: @bloggenre.id}%>
+  <%= submit_tag "送信" %>
+<% end %>

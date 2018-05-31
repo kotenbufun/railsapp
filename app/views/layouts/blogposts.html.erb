@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog Post</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'blogposts', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'blogposts', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+    <div>
+      <%= yield %>
+    </div>
+    <footer>
+      <ul>
+        <li><a href="/bloggenres">ジャンルの編集</a></li>
+        <li><a href="/blogconfigs">ブログ設定の編集</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>
